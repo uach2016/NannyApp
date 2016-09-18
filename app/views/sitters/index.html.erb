@@ -3,7 +3,7 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
-<h1>Sitters</h1>
+<h1>Our Nunnies</h1>
 
 <table>
   <thead>
@@ -26,17 +26,11 @@
         <td><%= sitter.description %></td>
         <td><%= sitter.name %></td>
         <td><%= link_to 'Show', sitter %></td>
-        <td><%= link_to 'Edit', edit_sitter_path(sitter) %></td>
-        <td><%= link_to 'Destroy', sitter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Sitter', new_sitter_path %>
-
 
 
 <div style='width: 800px;'>

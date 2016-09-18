@@ -24,6 +24,7 @@
   <strong>Name:</strong>
   <%= @sitter.name %>
 </p>
+<%= link_to 'Destroy', @sitter, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <%= link_to 'Edit', edit_sitter_path(@sitter) %> |
 <%= link_to 'Back', sitters_path %>

@@ -8,6 +8,7 @@ class SittersController < ApplicationController
     @hash = Gmaps4rails.build_markers(@sitters) do |sitter, marker|
       marker.lat sitter.latitude
       marker.lng sitter.longitude
+      marker.infowindow sitter.description
     end
   end
 
