@@ -11,6 +11,21 @@
 </p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @sitter.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @sitter.phone %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @sitter.date_of_birth %>
+</p>
+
+<p>
   <strong>Address:</strong>
   <%= @sitter.address %>
 </p>
@@ -20,10 +35,6 @@
   <%= @sitter.description %>
 </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @sitter.name %>
-</p>
 <%= link_to 'Destroy', @sitter, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <%= link_to 'Edit', edit_sitter_path(@sitter) %> |

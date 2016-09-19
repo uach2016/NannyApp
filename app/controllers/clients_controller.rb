@@ -25,6 +25,7 @@ class ClientsController < ApplicationController
   # POST /clients.json
   def create
     @client = Client.new(client_params)
+    @client.id = current_user.id
 
     respond_to do |format|
       if @client.save
@@ -55,8 +56,9 @@ class ClientsController < ApplicationController
   # DELETE /clients/1.json
   def destroy
     @client.destroy
+    current_user.destroy
     respond_to do |format|
-      format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
+      format.html { redirect_to destroy_user_session_path, notice: 'Client was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -28,8 +28,9 @@ class SittersController < ApplicationController
 
   # POST /sitters
   # POST /sitters.json
-  def create
+  def create 
     @sitter = Sitter.new(sitter_params)
+    @sitter.id = current_user.id
 
     respond_to do |format|
       if @sitter.save
@@ -60,8 +61,9 @@ class SittersController < ApplicationController
   # DELETE /sitters/1.json
   def destroy
     @sitter.destroy
+    current_user.destroy
     respond_to do |format|
-      format.html { redirect_to sitters_url, notice: 'Sitter was successfully destroyed.' }
+      format.html { redirect_to destroy_user_session_path, notice: 'Sitter was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,6 +76,6 @@ class SittersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sitter_params
-      params.require(:sitter).permit(:latitude, :longitude, :address, :description, :name)
+      params.require(:sitter).permit(:latitude, :longitude, :address, :description, :name, :date_of_birth, :phone)
     end
 end

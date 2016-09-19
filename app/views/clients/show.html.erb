@@ -11,6 +11,16 @@
 </p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @client.phone %>
+</p>
+
+<p>
   <strong>Address:</strong>
   <%= @client.address %>
 </p>
@@ -20,10 +30,8 @@
   <%= @client.description %>
 </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @client.name %>
-</p>
-
+  <%= @client.id %>
+    <%= current_user.id %>
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
+<%= link_to 'Destroy', @client, method: :delete, data: { confirm: 'Are you sure?' } %>
