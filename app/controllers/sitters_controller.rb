@@ -29,8 +29,7 @@ class SittersController < ApplicationController
   # POST /sitters
   # POST /sitters.json
   def create 
-    @sitter = Sitter.new(sitter_params)
-    @sitter.id = current_user.id
+    @sitter = current_user.build_sitter(sitter_params)
 
     respond_to do |format|
       if @sitter.save
@@ -60,8 +59,7 @@ class SittersController < ApplicationController
   # DELETE /sitters/1
   # DELETE /sitters/1.json
   def destroy
-    @sitter.destroy
-    current_user.destroy
+    @sitter.user.destroy
     respond_to do |format|
       format.html { redirect_to destroy_user_session_path, notice: 'Sitter was successfully destroyed.' }
       format.json { head :no_content }

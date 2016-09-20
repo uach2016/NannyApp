@@ -8,10 +8,6 @@
 <table>
   <thead>
     <tr>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Address</th>
-      <th>Description</th>
       <th>Name</th>
       <th colspan="3"></th>
     </tr>
@@ -20,14 +16,11 @@
   <tbody>
     <% @sitters.each do |sitter| %>
       <tr>
-        <td><%= sitter.latitude %></td>
-        <td><%= sitter.longitude %></td>
-        <td><%= sitter.address %></td>
-        <td><%= sitter.description %></td>
         <td><%= sitter.name %></td>
         <td><%= link_to 'Show', sitter %></td>
     <% end %>
   </tbody>
+
 </table>
 
 <br>
@@ -39,9 +32,9 @@
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers(<%=raw @hash.to_json %>)
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(<%=raw @hash.to_json %>)
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
 </script>
