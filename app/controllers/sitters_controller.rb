@@ -1,6 +1,5 @@
 class SittersController < ApplicationController
   before_action :set_sitter, only: [:show, :edit, :update, :destroy]
-
   # GET /sitters
   # GET /sitters.json
   def index
@@ -10,8 +9,13 @@ class SittersController < ApplicationController
       marker.lng sitter.longitude
       marker.infowindow sitter.description
     end
+    array_client = Array(current_user.client)
+   
+    @loc_client=Gmaps4rails.build_markers(array_client) do |client, marker|
+      marker.lat client.latitude
+      marker.lng client.longitude
+    end
   end
-
   # GET /sitters/1
   # GET /sitters/1.json
   def show
@@ -65,6 +69,7 @@ class SittersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
