@@ -7,18 +7,24 @@ class SittersController < ApplicationController
     @hash = Gmaps4rails.build_markers(@sitters) do |sitter, marker|
       marker.lat sitter.latitude
       marker.lng sitter.longitude
-      marker.infowindow sitter.description
+      sitter_path = view_context.link_to sitter.name, show_client_path(sitter)
+      marker.infowindow "<b>#{sitter_path}</b>"
     end
+
+
     array_client = Array(current_user.client)
-   
     @loc_client=Gmaps4rails.build_markers(array_client) do |client, marker|
       marker.lat client.latitude
       marker.lng client.longitude
+      marker.infowindow "YOUR LOCATION"
     end
   end
   # GET /sitters/1
   # GET /sitters/1.json
   def show
+  end
+  def show_client
+ @sitter = Sitter.find(params[:id])
   end
 
   # GET /sitters/new

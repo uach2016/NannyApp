@@ -1,16 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Latitude:</strong>
-  <%= @sitter.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @sitter.longitude %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @sitter.name %>
 </p>
@@ -34,3 +24,6 @@
   <strong>Description:</strong>
   <%= @sitter.description %>
 </p>
+
+<%= link_to 'Back', sitters_path %>
+

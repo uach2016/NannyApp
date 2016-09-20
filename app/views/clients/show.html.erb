@@ -1,16 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Latitude:</strong>
-  <%= @client.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @client.longitude %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @client.name %>
 </p>
@@ -30,8 +20,6 @@
   <%= @client.description %>
 </p>
 
-  <%= @client.id %>
-    <%= current_user.id %>
 <%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
-<%= link_to 'Destroy', @client, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Destroy', @client, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'See all our nunnies', sitters_path %>
