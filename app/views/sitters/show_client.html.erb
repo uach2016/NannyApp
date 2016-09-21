@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%= instant_hangout %>
+<%= instant_hangout topic: 'My Hangout' %>
+<%= instant_hangout hangout_type: 'onair' %>
+<%= instant_hangout widget_size: 200 %>
+<%= instant_hangout lang: :en %>
+
 <p>
   <strong>Name:</strong>
   <%= @sitter.name %>

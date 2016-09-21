@@ -28,6 +28,9 @@ gem 'gmaps4rails'
 gem 'paperclip'
 gem 'simple_form'
 gem 'figaro'
+gem "google-instant-hangouts"
+gem 'whatsapi'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
