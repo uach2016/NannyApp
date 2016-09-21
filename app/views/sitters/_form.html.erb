@@ -41,3 +41,12 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+
+
+<%= simple_form_for(sitter) do |form| %>
+  <%= form.input :avatar, as: :file %>
+  <%= form.button :submit %>
+<% end %>
+
+

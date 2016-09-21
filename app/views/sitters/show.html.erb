@@ -24,6 +24,13 @@
   <strong>Description:</strong>
   <%= @sitter.description %>
 </p>
+
+<p>
+  <strong>Pic:</strong>
+  <%= @sitter.avatar %>
+</p>
+
+<%= image_tag @sitter.avatar.url %>
 <!-- 
 <%= link_to 'Back', sitters_path %> -->
 <%= link_to 'Destroy', @sitter, method: :delete, data: { confirm: 'Are you sure?' } %>

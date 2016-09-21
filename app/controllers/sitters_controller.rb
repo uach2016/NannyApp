@@ -85,6 +85,6 @@ class SittersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sitter_params
-      params.require(:sitter).permit(:latitude, :longitude, :address, :description, :name, :date_of_birth, :phone)
+      params.require(:sitter).permit(:latitude, :longitude, :address, :description, :name, :date_of_birth, :phone, :avatar)
     end
 end
