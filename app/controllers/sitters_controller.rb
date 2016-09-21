@@ -24,7 +24,7 @@ class SittersController < ApplicationController
   def show
   end
   def show_client
- @sitter = Sitter.find(params[:id])
+    @sitter = Sitter.find(params[:id])
   end
 
   # GET /sitters/new

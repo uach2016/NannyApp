@@ -10,7 +10,6 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
-    UserMailer.welcome(current_user).deliver_now
   end
 
   # GET /clients/new

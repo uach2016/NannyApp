@@ -1,4 +1,4 @@
-<%= form_for(sitter) do |f| %>
+<%= simple_form_for(sitter) do |f| %>
   <% if sitter.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(sitter.errors.count, "error") %> prohibited this sitter from being saved:</h2>
@@ -37,16 +37,12 @@
     <%= f.text_area :description %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+    <%= f.input :avatar, as: :file %>
   </div>
-<% end %>
 
+    <%= f.button :submit %>
+ 
+  <% end %>
 
-
-<%= simple_form_for(sitter) do |form| %>
-  <%= form.input :avatar, as: :file %>
-  <%= form.button :submit %>
-<% end %>
-
-
+<h3>We sent you an email just for thanking you</h3>

@@ -3,6 +3,7 @@
 <p>
   <strong>Name:</strong>
   <%= @sitter.name %>
+  <%= image_tag @sitter.avatar.url %>
 </p>
 
 <p>
@@ -26,4 +27,5 @@
 </p>
 
 <%= link_to 'Back', sitters_path %>
+
 
