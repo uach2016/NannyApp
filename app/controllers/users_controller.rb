@@ -20,5 +20,10 @@ class UsersController < ApplicationController
     else @user.role == "client"
         redirect_to new_client_path
     end
+    send_mail
+  end
+
+  def send_mail
+    UserMailer.welcome(current_user).deliver_now
   end
 end

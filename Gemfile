@@ -27,6 +27,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'paperclip'
 gem 'simple_form'
+gem 'figaro'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
