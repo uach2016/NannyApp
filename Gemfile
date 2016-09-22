@@ -29,7 +29,8 @@ gem 'paperclip'
 gem 'simple_form'
 gem 'figaro'
 gem "google-instant-hangouts"
-gem 'whatsapi'
+gem 'devise_lastseenable'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -32,6 +32,13 @@
   <%= @sitter.description %>
 </p>
 
+<p>
+  <strong>Last visit:</strong>
+  <%= @sitter.user.last_seen %>
+</p>
+
+
+
 <%= link_to 'Back', sitters_path %>
 
 
