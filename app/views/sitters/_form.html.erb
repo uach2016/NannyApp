@@ -10,39 +10,39 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+ 
+  
     <%= f.label :name %>
+  <div class="field">
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
     <%= f.label :phone %>
+  <div class="field">
     <%= f.text_field :phone %>
   </div>
 
+     <%= f.label :address %>
   <div class="field">
-    <%= f.label :address %>
     <%= f.text_field :address %>
   </div>
-
-   <div class="field">
+  
     <%= f.label :date_of_birth %>
+   <div class="field">
     <%= f.date_field :date_of_birth %>
   </div>
 
-
-  <div class="field">
     <%= f.label :description %>
+  <div class="field">
     <%= f.text_area :description %>
   </div>
 
   <div class="field">
-    <%= f.input :avatar, as: :file %>
+    <%= f.input :Picture, as: :file %>
   </div>
 
-    <%= f.button :submit %>
- 
-  <% end %>
+    <%= f.button :submit, class: "btn btn-success" %>
+ <% end %>
 
 <h3>We sent you an email just for thanking you</h3>
+

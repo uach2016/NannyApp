@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>NunnyApp4u</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
- 		<div id="top_bar">
-  		<% if user_signed_in? %>
-    		<p><%= link_to 'Sign out', destroy_user_session_path, method: 'DELETE' %></p>
- 			<% else %>
-    		<p>
-      	<%= link_to 'Sign_up', new_user_registration_path %> | 
-      	<%= link_to 'Sign_in', new_user_session_path %>
-    		</p>
-  		<% end %>
-		</div>
-		<%= yield %>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">NunnyApp4u</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Sign out', destroy_user_session_path, method: 'DELETE' %></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+  
+    <%= yield %>
+ 
   </body>
+  </div>
 </html>
