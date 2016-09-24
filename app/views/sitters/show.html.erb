@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<%= instant_hangout topic: 'My Hangout' %>
+<p style="float:right">
+    <%= image_tag @sitter.avatar.url %>
+</p>
 
 <p>
   <strong>Name:</strong>
   <%= @sitter.name %>
-  <%= image_tag @sitter.avatar.url %>
 </p>
 
 <p>
@@ -24,10 +25,24 @@
 </p>
 
 <p>
+
   <strong>Description:</strong>
   <%= @sitter.description %>
 </p>
 
+
+<div style="float:right">
+  <%= instant_hangout topic: 'My Hangout' %>
+</div>
+
 <!-- 
 <%= link_to 'Home_Page', sitters_path %> -->
-<%= link_to 'Destroy', @sitter, method: :delete, data: { confirm: 'Are you sure?' },style: "float: right" %>
+
+<div class="container-fluid">
+  <div class="panel-group col-md-10" style="position:absolute; bottom:0px">
+    <div class="panel panel-default">
+      <%= link_to 'Edit', edit_sitter_path(@sitter)%>
+      <%= link_to 'Destroy', @sitter, method: :delete, data: { confirm: 'Are you sure?' },style: "float: right" %>
+    </div>
+  </div>
+</div>

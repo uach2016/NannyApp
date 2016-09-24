@@ -1,13 +1,13 @@
-<p id="notice"><%= notice %></p>
-<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="container">
 
-<%= instant_hangout topic: 'My Hangout' %>
-
+  <p style="float:right">
+    <%= image_tag @sitter.avatar.url %>
+  </p>
 
   <p>
     <strong>Name:</strong>
     <%= @sitter.name %>
-    <%= image_tag @sitter.avatar.url %>
   </p>
 
   <p>
@@ -30,14 +30,18 @@
     <%= @sitter.description %>
   </p>
 
+  <div style="float:right">
+    <%= instant_hangout topic: 'My Hangout' %>
+  </div>
+
   <p>
     <strong>Last visit:</strong>
     <%= @sitter.user.last_seen %>
   </p>
 
-
-
+  <div style="float:right">
   <%= link_to 'Back', sitters_path %>
+  </div>
 
 </div>
 
