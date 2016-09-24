@@ -3,7 +3,7 @@
 <p style="float:right">
     <%= image_tag @sitter.avatar.url %>
 </p>
-
+<div class="container col-md-3"
 <p>
   <strong>Name:</strong>
   <%= @sitter.name %>
@@ -29,7 +29,7 @@
   <strong>Description:</strong>
   <%= @sitter.description %>
 </p>
-
+</div>
 
 <div style="float:right">
   <%= instant_hangout topic: 'My Hangout' %>

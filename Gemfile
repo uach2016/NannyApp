@@ -32,7 +32,7 @@ gem "google-instant-hangouts"
 gem 'devise_lastseenable'
 gem 'bootswatch-rails'
 gem "font-awesome-rails"
-gem 'autoprefixer-rails'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
