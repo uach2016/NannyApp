@@ -43,6 +43,7 @@
     <div class="panel panel-default">
       <%= link_to 'Edit', edit_sitter_path(@sitter)%>
       <%= link_to 'Destroy', @sitter, method: :delete, data: { confirm: 'Are you sure?' },style: "float: right" %>
+      <%= link_to 'chat', chat_room_path, class: 'btn btn-success btn-xs' %>
     </div>
   </div>
 </div>

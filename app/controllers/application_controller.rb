@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
     end
 end
 
+
 class ThingsController < ApplicationController
   respond_to :html
 

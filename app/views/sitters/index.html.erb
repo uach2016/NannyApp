@@ -27,11 +27,13 @@
           <tr>
             <td><%= sitter.name %>&nbsp;&nbsp;</td>
             <td><%= link_to 'See profile', show_client_path(sitter), class: 'btn btn-success btn-xs' %></td>
+            <td><%= link_to 'chat', chat_room_path, class: 'btn btn-success btn-xs' %></td>
         <% end %>
         </tr>
       </tbody>
     </table>
   </div>
+   <td><%= link_to 'chat', chat_room_path, class: 'btn btn-success btn-xs' %></td>
   <div class="col-md-6">
     <div id="map" style='width: 100%; height: 400px;'></div>
   </div>

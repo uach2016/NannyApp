@@ -11,7 +11,6 @@ class SittersController < ApplicationController
       marker.infowindow "<b>#{sitter_path}</b>"
     end
 
-
     array_client = Array(current_user.client)
     @loc_client=Gmaps4rails.build_markers(array_client) do |client, marker|
       marker.lat client.latitude
